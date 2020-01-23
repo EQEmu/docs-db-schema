@@ -26,6 +26,7 @@ let schemaData = {};
 const SCHEMA_REFERENCE_YML_FILE = 'database-schema-reference.yml';
 
 /**
+ * 
  * Tables to be excluded from the 'pull' command
  */
 const excludedTables = [
@@ -65,7 +66,7 @@ const tableCategories = {
 		'account_ip',
 		'account_rewards',
 		'sharedbank'
-	],	
+	],
 	'Admin': [
 		'banned_ips',
 		'bot_command_settings',
