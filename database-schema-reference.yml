@@ -4109,21 +4109,21 @@ global_loot:
   race:
     dataType: mediumtext
     nullable: YES
-    description: '[Race](https://eqemu.gitbook.io/server/categories/npc/race-list)'
+    description: '[Race](https://eqemu.gitbook.io/server/categories/npc/race-list)', multiple races supported if | delimited
   class:
     dataType: mediumtext
     nullable: YES
-    description: '[Class](https://eqemu.gitbook.io/server/categories/player/class-list)'
+    description: '[Class](https://eqemu.gitbook.io/server/categories/player/class-list)', multiple classes supported if | delimited
   bodytype:
     dataType: mediumtext
     nullable: YES
-    description: '[Body Type](https://eqemu.gitbook.io/server/categories/npc/body-types)'
+    description: '[Body Type](https://eqemu.gitbook.io/server/categories/npc/body-types)', multiple body types supported if | delimited
   zone:
     dataType: mediumtext
     nullable: YES
     description: >-
       [Zone Short
-      Name](https://eqemu.gitbook.io/server/categories/zones/zone-list)
+      Name](https://eqemu.gitbook.io/server/categories/zones/zone-list), multiple zones supported if | delimited
   hot_zone:
     dataType: tinyint
     nullable: YES
