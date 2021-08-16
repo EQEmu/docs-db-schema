@@ -2,10 +2,10 @@
 
 | Column | Data Type | Description |
 | :--- | :--- | :--- |
-| id | int | Unique Hacker Identifier |
+| id | int | Unique Hacker Event Identifier |
 | account | text | [Account Identifier](https://github.com/EQEmu/docs-db-schema/tree/e0eb157dbf5563b03c0faf391abc87ec69239f4a/docs/categories/admin/account.md) |
 | name | text | [Character Name](https://github.com/EQEmu/docs-db-schema/tree/e0eb157dbf5563b03c0faf391abc87ec69239f4a/docs/categories/admin/character_data.md) |
-| hacked | text | Hacked |
+| hacked | text | Details about the hacker event |
 | zone | text | [Zone Short Name](https://eqemu.gitbook.io/server/categories/zones/zone-list) |
 | date | timestamp | Date Timestamp |
 
