@@ -10,7 +10,7 @@ description: >-
 
 This page serves as a reference for rules that we adhere to as a project, things could change over time but this is mostly a living representation of our current spec.
 
-This does not mean that past table creations match this specification, but that we intend to keep it consistent going forward.
+This does not mean that past table creations match this specification, but that we intend to keep it consistent going forward..
 
 ## Contributing
 
@@ -34,7 +34,7 @@ Table names should also adhere to an appropriate category prefix if necessary. F
 
 **Examples**
 
-```text
+```
 character_auras
 character_bandolier
 character_buffs
@@ -59,13 +59,13 @@ If your column has a relationship to another table, make sure that it prefixes t
 
 I'm making a new table called `keyring` and the schema looks like this:
 
-```text
+```
 id - int(11) pri - key
 character_id - int(11)
 item_id - int(11)
 ```
 
-We easily know that we have a loose foreign key relationship to the `character_data` table \(Which currently breaks convention and should be called `characters`\).
+We easily know that we have a loose foreign key relationship to the `character_data` table (Which currently breaks convention and should be called `characters`).
 
 We also know that we have a loose relationship to the `items` table and we resolve to `items:id`
 
@@ -81,7 +81,7 @@ We can easily convert to and from unix using datetime, use this as a standard pr
 
 A simple index can go a long way for performance if you have data that is being looked up frequently especially in the case of strings.
 
-For example, we have a table called `saylink` \(should be plural\) that contains `phrase` which gets looked up frequently when a saylink is clicked or when saylinks are being parsed inside of a `quest::say` context, this lookup and scan gets expensive when there is no index on the column itself. What ends up happening is that the MySQL engine ends up having to do full table scans to find the phrase corresponding to the requested record to see if it exists or lookup and ID associated to said saylink.
+For example, we have a table called `saylink` (should be plural) that contains `phrase` which gets looked up frequently when a saylink is clicked or when saylinks are being parsed inside of a `quest::say` context, this lookup and scan gets expensive when there is no index on the column itself. What ends up happening is that the MySQL engine ends up having to do full table scans to find the phrase corresponding to the requested record to see if it exists or lookup and ID associated to said saylink.
 
 If your table's primary method of lookup is through `id` - you already get indexing out of the box, there is no additional indexes required.
 
@@ -91,5 +91,4 @@ Only use what you intend to use for your integer space, if you don't plan on hav
 
 ## Soft Deletes
 
-If your table or feature uses the concept of soft deleting an object, please use `deleted_at` in a `datetime` field to mark that entity as deleted and then make sure you use queries that take into consideration where `deleted_at` is null \(An index may be appropriate on this field\).
-
+If your table or feature uses the concept of soft deleting an object, please use `deleted_at` in a `datetime` field to mark that entity as deleted and then make sure you use queries that take into consideration where `deleted_at` is null (An index may be appropriate on this field).
